@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://WebServiceSOAP/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Implements_SOAPService" targetNamespace="http://WebServiceSOAP/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types />
+  <message name="Cubo">
+    <part name="arg0" type="xsd:float" />
+  </message>
+  <message name="CuboResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="Somar">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="SomarResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="Multiplicar">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="MultiplicarResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="Subtrair_A_menos_B">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="Subtrair_A_menos_BResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="Dividir_A_por_B">
+    <part name="arg0" type="xsd:float" />
+    <part name="arg1" type="xsd:float" />
+  </message>
+  <message name="Dividir_A_por_BResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <message name="Quadrado">
+    <part name="arg0" type="xsd:float" />
+  </message>
+  <message name="QuadradoResponse">
+    <part name="return" type="xsd:float" />
+  </message>
+  <portType name="Interface_SOAP">
+    <operation name="Cubo">
+      <input wsam:Action="http://WebServiceSOAP/Interface_SOAP/CuboRequest" message="tns:Cubo" />
+      <output wsam:Action="http://WebServiceSOAP/Interface_SOAP/CuboResponse" message="tns:CuboResponse" />
+    </operation>
+    <operation name="Somar" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://WebServiceSOAP/Interface_SOAP/SomarRequest" message="tns:Somar" />
+      <output wsam:Action="http://WebServiceSOAP/Interface_SOAP/SomarResponse" message="tns:SomarResponse" />
+    </operation>
+    <operation name="Multiplicar" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://WebServiceSOAP/Interface_SOAP/MultiplicarRequest" message="tns:Multiplicar" />
+      <output wsam:Action="http://WebServiceSOAP/Interface_SOAP/MultiplicarResponse" message="tns:MultiplicarResponse" />
+    </operation>
+    <operation name="Subtrair_A_menos_B" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://WebServiceSOAP/Interface_SOAP/Subtrair_A_menos_BRequest" message="tns:Subtrair_A_menos_B" />
+      <output wsam:Action="http://WebServiceSOAP/Interface_SOAP/Subtrair_A_menos_BResponse" message="tns:Subtrair_A_menos_BResponse" />
+    </operation>
+    <operation name="Dividir_A_por_B" parameterOrder="arg0 arg1">
+      <input wsam:Action="http://WebServiceSOAP/Interface_SOAP/Dividir_A_por_BRequest" message="tns:Dividir_A_por_B" />
+      <output wsam:Action="http://WebServiceSOAP/Interface_SOAP/Dividir_A_por_BResponse" message="tns:Dividir_A_por_BResponse" />
+    </operation>
+    <operation name="Quadrado">
+      <input wsam:Action="http://WebServiceSOAP/Interface_SOAP/QuadradoRequest" message="tns:Quadrado" />
+      <output wsam:Action="http://WebServiceSOAP/Interface_SOAP/QuadradoResponse" message="tns:QuadradoResponse" />
+    </operation>
+  </portType>
+  <binding name="Implements_SOAPPortBinding" type="tns:Interface_SOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="Cubo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </output>
+    </operation>
+    <operation name="Somar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </output>
+    </operation>
+    <operation name="Multiplicar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </output>
+    </operation>
+    <operation name="Subtrair_A_menos_B">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </output>
+    </operation>
+    <operation name="Dividir_A_por_B">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </output>
+    </operation>
+    <operation name="Quadrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://WebServiceSOAP/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Implements_SOAPService">
+    <port name="Implements_SOAPPort" binding="tns:Implements_SOAPPortBinding">
+      <soap:address location="http://localhost:9876/WebSeviceSOAP" />
+    </port>
+  </service>
+</definitions>
